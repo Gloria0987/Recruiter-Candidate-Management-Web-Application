@@ -51,7 +51,7 @@ export class AddCandidateModal extends Component{
                             <Form.Control as="textarea" rows={3} value={this.state.value} onChange={this.handleChange} />
                         </Form.Group>
                         <Button variant="primary" type="submit" onClick={()=>console.log(this.props.candidate)}>
-                            Submit
+                            Save
                         </Button>
                         </form>
                     </div>
