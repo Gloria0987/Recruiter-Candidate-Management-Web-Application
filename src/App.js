@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {Home} from './components/Home'
+import {Candidates} from './components/Candidates';
+import {Navigation} from './components/Navigation'
 
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className="container">
+
+      <h3 className="m-3 d-flex justify-content-center">Candidate Details</h3>
+      <h5 className="m-3 d-flex justify-content-center">Recruter Candidate Management Portal</h5>
+
+    <Navigation/>
+     <Switch>
+       <Route path='/' component={Home} exact/>
+       <Route path='/' component={Candidates}/>
+     </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 
